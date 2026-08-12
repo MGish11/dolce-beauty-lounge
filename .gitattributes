@@ -1,0 +1,18 @@
+# Normalise line endings in the repo, check out native on each platform.
+* text=auto
+
+# Binary assets. Marking these explicitly stops git from attempting line-ending
+# conversion or textual diffs on them — without it, a 21MB video can be treated
+# as text and mangled on checkout.
+*.mp4   binary
+*.webm  binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+
+# SVG is text and benefits from diffing.
+*.svg   text

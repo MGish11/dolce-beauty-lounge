@@ -1,0 +1,29 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Generated test harnesses. These are throwaway copies of index.html used to
+# force the reduced-motion / iOS-fallback / no-IntersectionObserver code paths
+# during testing (see README "Testing the alternate paths"). They should never
+# be committed or deployed — a stray one on a live host is a public duplicate
+# of the site with its capability detection disabled.
+_*-test.html
+_*-test.css
+
+# Video derivatives and the 4K source master ARE committed on purpose — the
+# static deploy serves them straight from the repo. Note that git stores every
+# version of a binary forever, so a re-encode adds another full copy to history
+# rather than a diff. If the videos are ever re-cut more than once or twice,
+# move them to Git LFS or to the host's asset storage before that history
+# becomes painful.

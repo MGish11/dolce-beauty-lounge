@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Marks the document as JS-capable before first paint, so CSS can hide the
+     elements that JS animates in without ever hiding them from a no-JS
+     visitor. Deliberately inline and blocking — it must beat first paint. -->
+<script>document.documentElement.classList.add('js');</script>
+
+<title>Dolce Beauty Lounge — Luxury Beauty &amp; Skincare Studio in Virginia Beach, VA</title>
+<meta name="description" content="An unhurried beauty and skincare studio in Virginia Beach, Virginia. Facials and skin therapy, lashes and brows, hair styling and color, makeup artistry, waxing, and bridal services — by appointment.">
+
+<!-- Domain confirmed: dolcebeautylounge.com is the live site. -->
+<link rel="canonical" href="https://dolcebeautylounge.com/">
+
+<meta property="og:type" content="business.business">
+<meta property="og:site_name" content="Dolce Beauty Lounge">
+<meta property="og:title" content="Dolce Beauty Lounge — Beauty &amp; Skincare Studio in Virginia Beach, VA">
+<meta property="og:description" content="An unhurried beauty and skincare studio in Virginia Beach, Virginia. Facials, lashes and brows, hair, makeup, waxing, and bridal — by appointment.">
+<meta property="og:url" content="https://dolcebeautylounge.com/">
+<meta property="og:image" content="https://dolcebeautylounge.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Warm, sunlit reception of Dolce Beauty Lounge with an arched plaster corridor and a backlit onyx desk.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dolce Beauty Lounge — Virginia Beach, Virginia">
+<meta name="twitter:description" content="An unhurried beauty and skincare studio in Virginia Beach, Virginia.">
+<meta name="twitter:image" content="https://dolcebeautylounge.com/assets/img/og-image.jpg">
+
+<meta name="theme-color" content="#231109">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- Only the hero poster is preloaded. The hero video pulls its own first bytes
+     via preload="auto" on the element; everything below the fold is lazy. -->
+<link rel="preload" as="image" href="assets/img/hero-first.jpg" fetchpriority="high">
+
+<!-- The module CDN is on the critical path for every motion visitor; the
+     handshake is worth starting during head parse. -->
+<link rel="preconnect" href="https://esm.sh" crossorigin>
+<link rel="modulepreload" href="main.js">
+<link rel="modulepreload" href="modules/env.js">
+
+<!-- Display: Cormorant Garamond (free stand-in for Canela / Freight Display).
+     Body: Inter. Both with display=swap.
+     Only 300 and 400 are requested because only 300 and 400 are used — the
+     original 500 and italic-300 were four extra font files fetched to style
+     nothing. Check styles.css before adding a weight back here. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Loaded without blocking render. font-display:swap means text paints in the
+     fallback face immediately either way, so blocking first paint on this
+     stylesheet buys nothing — it only delays FCP. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap">
+</noscript>
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "BeautySalon"],
+  "@id": "https://dolcebeautylounge.com/#studio",
+  "name": "Dolce Beauty Lounge",
+  "description": "A luxury beauty and skincare studio in Virginia Beach, Virginia, offering facials and skin therapy, lashes and brows, hair styling and color, makeup artistry, waxing, and bridal services.",
+  "url": "https://dolcebeautylounge.com/",
+  "image": "https://dolcebeautylounge.com/assets/img/og-image.jpg",
+  "logo": "https://dolcebeautylounge.com/assets/img/og-image.jpg",
+  "telephone": "+1-757-773-9711",
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "277 North Lynnhaven Road, Suite 103",
+    "addressLocality": "Virginia Beach",
+    "addressRegion": "VA",
+    "postalCode": "23452",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.8398,
+    "longitude": -76.0827
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Virginia Beach" },
+    { "@type": "City", "name": "Norfolk" },
+    { "@type": "City", "name": "Chesapeake" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/dolcebrows/",
+    "https://www.instagram.com/dolcebeautylounge/",
+    "https://www.facebook.com/dolcebeautyloungeva/",
+    "https://www.yelp.com/biz/dolce-beauty-lounge-virginia-beach"
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=277+North+Lynnhaven+Road+Suite+103+Virginia+Beach+VA+23452",
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://square.site/book/8PMRBSTVKTESZ/dolce-beauty-lounge-virginia-beach-va",
+      "inLanguage": "en-US",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": { "@type": "Reservation", "name": "Appointment at Dolce Beauty Lounge" }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facials & Skin Therapy" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lashes & Brows" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Styling & Color" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Makeup Artistry" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Waxing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal & Events" } }
+    ]
+  }
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================================================================
+     LOADING GATE
+     Covers the hero until the video reaches readyState >= 3. Scroll is
+     locked behind it. main.js fades it out; with JS off or reduced motion
+     it is simply never shown (CSS hides it by default, JS opts it in).
+     =================================================================== -->
+<div class="gate" id="gate" data-gate hidden>
+  <p class="gate__wordmark">Dolce Beauty Lounge</p>
+  <div class="gate__rule" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span class="gate__rule-fill" data-gate-fill></span>
+  </div>
+</div>
+
+<header class="masthead" id="top">
+  <a class="masthead__wordmark" href="#top">Dolce&nbsp;Beauty&nbsp;Lounge</a>
+  <nav class="masthead__nav" aria-label="Primary">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#ritual">Ritual</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#social">Instagram</a></li>
+    </ul>
+  </nav>
+  <!-- TODO: point href at the real booking provider URL. -->
+  <a class="masthead__cta" href="https://square.site/book/8PMRBSTVKTESZ/dolce-beauty-lounge-virginia-beach-va">Book</a>
+</header>
+
+<main id="main">
+
+  <!-- ===================================================================
+       1. HERO — scroll-scrubbed video
+       The <video> is decorative; every word on screen is real text below.
+       Source order is MP4 first, WebM second: both derivatives are all-intra
+       and near-identical in weight (12.83MB vs 11.60MB), but H.264 has far
+       broader hardware-accelerated seek support, which is what makes the
+       scrub feel like film. WebM stays as the fallback for anything that
+       can't take the MP4.
+       The 720p swap uses a `media` attribute so the browser never starts
+       fetching the 1440p file on a small viewport at all; modules/hero.js
+       re-checks with matchMedia after load and corrects currentSrc if the
+       browser picked wrong. (`media` is honoured at load time but never
+       re-evaluated on resize, which is why the JS check exists.)
+
+       preload is "none" in the markup, NOT "auto". modules/hero.js promotes
+       it to "auto" and calls load() the moment it commits to the scrub path,
+       so the file is still fully buffered for scrubbing. The difference is
+       who pays: with preload="auto" here, a reduced-motion visitor and every
+       iOS visitor would download ~13MB for a video that is only ever going
+       to show its poster frame. Those paths now cost zero video bytes.
+       =================================================================== -->
+  <section class="hero" id="hero" data-hero>
+    <div class="hero__media" aria-hidden="true">
+      <video
+        class="hero__video"
+        data-hero-video
+        muted
+        playsinline
+        preload="none"
+        disablepictureinpicture
+        poster="assets/img/hero-first.jpg">
+        <source src="assets/video/hero-720.mp4" type="video/mp4" media="(max-width: 900px)">
+        <source src="assets/video/hero-1440.mp4" type="video/mp4">
+        <source src="assets/video/hero-1080.webm" type="video/webm">
+      </video>
+
+      <!-- Static crossfade pair used instead of the scrubber on iOS and any
+           device that fails the scrub feature-detect. Inert until main.js
+           promotes it. -->
+      <!-- loading="lazy" keeps these off the critical path while the div is
+           hidden; unhiding it in the fallback path triggers the fetch. -->
+      <div class="hero__stills" data-hero-stills hidden>
+        <img src="assets/img/hero-first.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+        <img src="assets/img/hero-last.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <!-- One sticky frame holds the type and the indicator together, so they
+         pin for the hero's full scroll length and release at its end without
+         needing JS. GSAP transforms them inside this frame in step 4. -->
+    <div class="hero__frame">
+      <div class="hero__type">
+        <h1 class="hero__wordmark">Dolce Beauty Lounge</h1>
+        <p class="hero__place"><span class="label">Virginia Beach, Virginia</span></p>
+        <p class="hero__sub" data-hero-sub>A studio built for the pace the work deserves.</p>
+      </div>
+
+      <div class="hero__indicator" data-hero-indicator aria-hidden="true">
+        <span class="hero__indicator-rule"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       2. STATEMENT
+       One sentence. main.js wraps each word in a span for the stagger;
+       the markup stays a plain sentence so it reads correctly unstyled,
+       to screen readers, and with JS off.
+       =================================================================== -->
+  <section class="statement tone tone--dark" id="statement" aria-labelledby="statement-heading">
+    <h2 class="visually-hidden" id="statement-heading">About the studio</h2>
+    <p class="statement__line" data-split>
+      We keep one room, a short list of services, and a long appointment — so that skin,
+      hair, and hands are tended at the speed of craft rather than the speed of the calendar.
+    </p>
+  </section>
+
+  <!-- ===================================================================
+       3. SERVICES — sticky left heading, scrolling right column
+       =================================================================== -->
+  <section class="services tone tone--light" id="services" aria-labelledby="services-heading">
+    <div class="services__aside">
+      <p class="label">01 — Services</p>
+      <h2 class="services__heading" id="services-heading">What we do,<br>and only that.</h2>
+      <p class="services__note">
+        Six disciplines, each with a dedicated specialist. No prices here on purpose —
+        every service is quoted after a consult, because hair and skin do not price by the hour.
+      </p>
+
+      <!-- Decorative, hence the empty alt. It sits inside the sticky aside so it
+           stays in view while the service cards scroll past, and turns on its own
+           vertical axis as the section moves. Replaces the WebGL glass shard. -->
+      <figure class="plant">
+        <img src="assets/img/services-plant.webp"
+             alt=""
+             width="780" height="748"
+             loading="lazy" decoding="async"
+             data-plant>
+      </figure>
+    </div>
+
+    <ul class="services__list">
+      <li class="service" data-tilt>
+        <h3 class="service__name">Facials &amp; Skin Therapy</h3>
+        <p class="service__desc">Diagnostic, unhurried treatment built around the skin you have today.</p>
+      </li>
+      <li class="service" data-tilt>
+        <h3 class="service__name">Lashes &amp; Brows</h3>
+        <p class="service__desc">Extensions, lifts, and shaping calibrated to the architecture of your face.</p>
+      </li>
+      <li class="service" data-tilt>
+        <h3 class="service__name">Hair Styling &amp; Color</h3>
+        <p class="service__desc">Dimensional color and cuts that keep their shape as they grow out.</p>
+      </li>
+      <li class="service" data-tilt>
+        <h3 class="service__name">Makeup Artistry</h3>
+        <p class="service__desc">Application for the camera, the evening, or an ordinary Tuesday.</p>
+      </li>
+      <li class="service" data-tilt>
+        <h3 class="service__name">Waxing</h3>
+        <p class="service__desc">Precise hair removal with aftercare that genuinely settles the skin.</p>
+      </li>
+      <li class="service" data-tilt>
+        <h3 class="service__name">Bridal &amp; Events</h3>
+        <p class="service__desc">Trials, timelines, and on-site teams for mornings that cannot run late.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===================================================================
+       4. THE SPACE — horizontal gallery, pinned and translated by scroll
+       TODO: replace every image in this section with real interior
+       photography. The current files are frames pulled from the hero
+       footage purely to hold the layout. Keep the stated width/height
+       attributes (or update them together) so nothing shifts on swap.
+       Aspect ratios in use: 4:5 portrait (1000x1250), 3:2 landscape (1500x1000).
+       =================================================================== -->
+  <section class="space tone tone--dark" id="space" aria-labelledby="space-heading">
+    <div class="space__intro">
+      <p class="label">02 — The Space</p>
+      <h2 class="space__heading" id="space-heading">Arched plaster, terrazzo underfoot, and light that turns gold by four.</h2>
+    </div>
+
+    <!-- Base behaviour (no JS, reduced motion): the viewport is a native
+         horizontal scroller, which is a genuinely usable gallery on its own.
+         Step 4 adds .has-pin to <html>, which turns the viewport sticky and
+         hands the X translation to ScrollTrigger. -->
+    <div class="space__viewport">
+      <div class="space__track" data-gallery>
+      <figure class="space__item space__item--portrait">
+        <img src="assets/img/space-01.jpg" alt="The entry corridor, lined with cream plaster arches." width="1000" height="1250" loading="lazy" decoding="async">
+        <figcaption>The entry corridor</figcaption>
+      </figure>
+      <figure class="space__item space__item--landscape">
+        <img src="assets/img/space-02.jpg" alt="Polished terrazzo flooring reflecting warm uplight along the corridor." width="1500" height="1000" loading="lazy" decoding="async">
+        <figcaption>Terrazzo and uplight</figcaption>
+      </figure>
+      <figure class="space__item space__item--portrait">
+        <img src="assets/img/space-03.jpg" alt="An arched doorway opening onto the treatment wing." width="1000" height="1250" loading="lazy" decoding="async">
+        <figcaption>The treatment wing</figcaption>
+      </figure>
+      <figure class="space__item space__item--landscape">
+        <img src="assets/img/space-04.jpg" alt="Sheer curtains diffusing afternoon sun across the studio floor." width="1500" height="1000" loading="lazy" decoding="async">
+        <figcaption>Afternoon light</figcaption>
+      </figure>
+      <figure class="space__item space__item--portrait">
+        <img src="assets/img/space-05.jpg" alt="A single white orchid on the reception desk." width="1000" height="1250" loading="lazy" decoding="async">
+        <figcaption>Reception</figcaption>
+      </figure>
+      <figure class="space__item space__item--landscape">
+        <img src="assets/img/space-06.jpg" alt="The backlit onyx reception desk glowing against sunlit curtains." width="1500" height="1000" loading="lazy" decoding="async">
+        <figcaption>The onyx desk</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       5. RITUAL — three steps, masked-line wipe reveal, progress rail
+       =================================================================== -->
+  <section class="ritual tone tone--light" id="ritual" aria-labelledby="ritual-heading">
+    <div class="ritual__intro">
+      <p class="label">03 — Ritual</p>
+      <h2 class="ritual__heading" id="ritual-heading">Every appointment runs the same three movements.</h2>
+    </div>
+
+    <div class="ritual__rail" aria-hidden="true"><span class="ritual__rail-fill" data-rail-fill></span></div>
+
+    <ol class="ritual__steps">
+      <li class="step" data-step>
+        <p class="step__num">01</p>
+        <h3 class="step__name">Consult</h3>
+        <p class="step__desc">
+          We start seated, not reclined. Ten minutes on what you want, what you have already
+          tried, and what your skin and hair are actually doing right now.
+        </p>
+      </li>
+      <li class="step" data-step>
+        <p class="step__num">02</p>
+        <h3 class="step__name">Treat</h3>
+        <p class="step__desc">
+          The work itself, at the pace it deserves. No upsell halfway through, no clock on
+          the wall, no second client waiting in your chair.
+        </p>
+      </li>
+      <li class="step" data-step>
+        <p class="step__num">03</p>
+        <h3 class="step__name">Restore</h3>
+        <p class="step__desc">
+          Tea, a mirror in honest light, and a written plan for the weeks between visits —
+          including what to stop doing.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================================================================
+       6. LOCATION & BOOKING
+       Address, phone, booking URL and socials are real, taken from
+       dolcebeautylounge.com and the studio's Square booking page.
+       Still unconfirmed: opening hours (two sources disagree — see below)
+       and whether an email address should be published.
+       Any change here must be mirrored in the JSON-LD block in <head>.
+       =================================================================== -->
+  <section class="visit tone tone--dark" id="visit" aria-labelledby="visit-heading">
+    <div class="visit__intro">
+      <p class="label">04 — Visit</p>
+      <h2 class="visit__heading" id="visit-heading">By appointment, in Virginia Beach.</h2>
+    </div>
+
+    <div class="visit__grid">
+
+      <div class="visit__block">
+        <h3 class="label">Address</h3>
+        <address class="visit__address">
+          277 North Lynnhaven Road, Suite&nbsp;103<br>
+          Virginia Beach, VA 23452<br>
+          United States
+        </address>
+        <!-- Primary number: this is the one on the live site's call button and
+             on the current Square booking listing. A second number,
+             757-739-2570, appears in the old site's footer and in older
+             directory listings (Yelp, Fresha) — confirm whether it is still in
+             service before publishing it anywhere. -->
+        <p><a class="visit__tel" href="tel:+17577739711">(757) 773-9711</a></p>
+        <!-- TODO: no public email address exists on the current site or any
+             listing. Add one here (and to the JSON-LD) if the studio wants
+             email enquiries; otherwise this line can stay removed. -->
+      </div>
+
+      <div class="visit__block">
+        <h3 class="label">Hours</h3>
+        <!-- ⚠ TODO — CONFIRM BEFORE LAUNCH. Two sources disagree:
+               dolcebeautylounge.com  Mon–Fri 10–7,  Sat 10–5,  Sun closed
+               Square booking page    Wed 1–7, Thu 10–6, Fri 10–6, Sat 10–3,
+                                      Sun/Mon/Tue closed
+             The values below follow the studio's own website. Square may be
+             showing one practitioner's bookable slots rather than store hours,
+             or the website may simply be stale — only the owner can say.
+             Mirror any change into openingHoursSpecification in the JSON-LD. -->
+        <dl class="hours">
+          <div class="hours__row"><dt>Monday — Friday</dt><dd>10:00 — 19:00</dd></div>
+          <div class="hours__row"><dt>Saturday</dt><dd>10:00 — 17:00</dd></div>
+          <div class="hours__row"><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+      </div>
+
+      <div class="visit__block visit__block--cta">
+        <p class="visit__cta-note">
+          Consults are free and take about fifteen minutes. Book one on its own if you are
+          not sure what you need yet.
+        </p>
+        <!-- Live Square booking page for the studio. -->
+        <a class="btn btn--primary" href="https://square.site/book/8PMRBSTVKTESZ/dolce-beauty-lounge-virginia-beach-va" data-magnetic>
+          Book an Appointment
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Live Google Maps embed. The <iframe> is NOT in the markup: modules/map.js
+         injects it once the visitor is within ~600px of this block, so the map's
+         scripts, tiles and third-party cookies cost nothing on first load. The
+         styled facade below is what ships, and it is also the permanent fallback
+         with JavaScript disabled (see the <noscript> block).
+         Keyless embed endpoint — no Google Maps API key required. -->
+    <figure class="map"
+            data-map
+            data-map-src="https://maps.google.com/maps?q=277%20North%20Lynnhaven%20Road%20Suite%20103%20Virginia%20Beach%20VA%2023452&amp;z=15&amp;output=embed">
+
+      <div class="map__canvas">
+        <div class="map__facade" role="img"
+             aria-label="Map showing Dolce Beauty Lounge at 277 North Lynnhaven Road, Suite 103, Virginia Beach, Virginia.">
+          <span class="map__pin" aria-hidden="true"></span>
+          <p class="map__label" aria-hidden="true">277 N Lynnhaven Rd &middot; Virginia Beach</p>
+        </div>
+
+        <noscript>
+          <iframe class="map__frame map__frame--noscript"
+                  src="https://maps.google.com/maps?q=277%20North%20Lynnhaven%20Road%20Suite%20103%20Virginia%20Beach%20VA%2023452&amp;z=15&amp;output=embed"
+                  title="Google Map showing Dolce Beauty Lounge at 277 North Lynnhaven Road, Suite 103, Virginia Beach, Virginia"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </noscript>
+      </div>
+
+      <figcaption class="map__actions">
+        <a class="map__link" href="https://www.google.com/maps/search/?api=1&amp;query=277+North+Lynnhaven+Road+Suite+103+Virginia+Beach+VA+23452">Get directions</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ===================================================================
+       7. INSTAGRAM
+       A link out, not a feed. Embedded posts were deliberately removed —
+       there is no third-party script, no iframe and no Instagram cookie
+       set on this page.
+       =================================================================== -->
+  <section class="social tone tone--light" id="social" aria-labelledby="social-heading">
+    <p class="label">05 — Instagram</p>
+    <h2 class="social__heading" id="social-heading">The work, as it happens.</h2>
+    <a class="social__handle" href="https://www.instagram.com/dolcebrows/" rel="me noopener">
+      @dolcebrows
+      <span class="social__arrow" aria-hidden="true">&#8599;</span>
+    </a>
+  </section>
+
+</main>
+
+<footer class="footer" aria-labelledby="footer-heading">
+  <h2 class="visually-hidden" id="footer-heading">Site footer</h2>
+  <p class="footer__wordmark">Dolce Beauty Lounge</p>
+
+  <nav class="footer__social" aria-label="Social media">
+    <ul>
+      <!-- @dolcebrows is the active account (confirmed by the owner). The
+           @dolcebeautylounge handle exists but has not posted since 2021; it
+           is kept in the JSON-LD sameAs list only. -->
+      <li><a href="https://www.instagram.com/dolcebrows/" rel="me noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/dolcebeautyloungeva/" rel="me noopener">Facebook</a></li>
+    </ul>
+  </nav>
+
+  <p class="footer__legal">
+    <small>&copy; <span data-year>2026</span> Dolce Beauty Lounge. Virginia Beach, Virginia. All rights reserved.</small>
+  </p>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+    "lenis": "https://esm.sh/lenis@1.1.20",
+    "three": "https://esm.sh/three@0.169.0"
+  }
+}
+</script>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
