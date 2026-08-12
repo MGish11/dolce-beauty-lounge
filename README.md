@@ -60,19 +60,20 @@ Still open:
 > Items marked done appear in two places — the visible page and the JSON-LD —
 > and both should stay in sync.
 
-### Services copy — currently fictional
+### Services copy
 
-The six service cards are placeholders and do not reflect the actual studio
-offering.
-
-The live site appears to focus on: threading (brows, upper/lower lip, chin, full
+The live site focuses on: threading (brows, upper/lower lip, chin, full
 face, sideburns), eyebrow tinting, acne facials (Face Reality bi-weekly,
 "acne bootcamp"), and black seed oil scalp treatments. It does not currently
 advertise hair styling, makeup artistry, bridal, lashes, or waxing.
 
-- [ ] Rewrite the six `.service` cards in the Services section to match the real
-      business.
-- [ ] Mirror the same service list into `hasOfferCatalog` in the JSON-LD.
+- [x] Rewrite the six `.service` cards in the Services section to match the real
+      business — now Brow Threading, Face Threading, Eyebrow Tinting, Acne
+      Facials, Acne Bootcamp, Scalp Treatment.
+- [x] Mirror the same service list into `hasOfferCatalog` in the JSON-LD.
+- [ ] The meta description, `og:description`, and `twitter:description` in
+      `<head>` still list the old fictional service categories (hair styling,
+      makeup, waxing, bridal) — not yet reconciled with the real list above.
 - [ ] Review and update the Statement sentence and the Ritual steps, which are
       still written around a broad full-service salon.
 
