@@ -7,101 +7,99 @@ served from any static host. Deploy by uploading the directory.
 
 ---
 
-## Before you launch — content checklist
+## Startup guide
 
-Everything below is a placeholder. Each item is marked `TODO` in the source.
+1. Open the project folder in your editor.
+2. Serve the site from a local static host.
+   - Example: use the built-in Live Server extension, or run a simple local server.
+   - In PowerShell: `python -m http.server 8000` from the project root.
+3. Open `http://localhost:8000` in your browser.
+4. View `index.html`, `styles.css`, and `main.js` to inspect the markup,
+   layout, and entrypoint behavior.
+5. Edit `index.html` for content updates and `assets/img/` for placeholder image
+   replacements.
+6. If you change the hero video or gallery images, also update the related
+   `width`/`height` attributes and alt text.
+
+---
+
+## Content checklist
+
+The checklist below tracks the remaining placeholders and source `TODO` comments
+that still need to be resolved.
 
 ### Business details — `index.html`
 
-Filled in from the studio's live site (dolcebeautylounge.com), its Square
+Filled in from the studio's live site (`dolcebeautylounge.com`), its Square
 booking page, and cross-checked against Fresha and Yelp listings.
 
-- [x] **Street address** — 277 North Lynnhaven Road, Suite 103, Virginia Beach, VA 23452
-- [x] **Phone** — (757) 773-9711
-- [x] **Booking URL** — the studio's Square page (all three places)
-- [x] **Google Maps link** — built from the real address
-- [x] **Social profiles** — Instagram, Facebook, Yelp
-- [x] **Production domain** — `dolcebeautylounge.com` confirmed as the live domain
+- [x] Street address — 277 North Lynnhaven Road, Suite 103, Virginia Beach, VA 23452
+- [x] Phone — (757) 773-9711
+- [x] Booking URL — currently points to the studio's Square page
+- [x] Google Maps link — built from the real address
+- [x] Social profiles — Instagram, Facebook, Yelp
+- [x] Production domain — `dolcebeautylounge.com` confirmed as the live domain
 
 Still open:
 
-- [ ] ⚠ **Opening hours — sources disagree, confirm with the owner.**
-      The site says Mon–Fri 10–7, Sat 10–5, Sun closed. The Square booking page
-      says Wed 1–7, Thu 10–6, Fri 10–6, Sat 10–3, Sun/Mon/Tue closed. The site's
-      version is what is published; Square may only be showing one
-      practitioner's bookable slots. Mirror any change into
-      `openingHoursSpecification` in the JSON-LD.
-- [ ] **Second phone number** — 757-739-2570 appears in the old site's footer and
-      in older Yelp/Fresha listings. Confirm whether it is still in service. Only
-      757-773-9711 is published on the new site.
-- [ ] **Email** — no public address exists anywhere. Add one, or leave it off.
-- [ ] **Suite number** — every source says Suite 103 except Yelp, which says 106.
-      Worth a glance at the door.
-- [ ] **Geo coordinates** — the JSON-LD lat/long is approximate for N Lynnhaven Rd.
-      Replace with the exact pin from Google Maps.
-- [ ] **Instagram account** — `@dolcebeautylounge` (the studio account) is linked.
-      The old site links `@dolcebrows`, the owner's personal/legacy account from
-      before the rebrand. Confirm which they want.
+- [ ] ⚠ Opening hours — sources disagree, confirm with the owner and update both
+      the visible page and the JSON-LD `openingHoursSpecification`.
+- [ ] Confirm the final booking link — the masthead CTA currently uses the
+      Square booking page; verify whether this is the actual provider URL.
+- [ ] Second phone number — 757-739-2570 appears in the old site's footer and
+      in older directory listings; confirm whether it is still in service.
+- [ ] Email — no public email address exists on the current site or listings.
+      Add one only if the studio wants email enquiries accepted.
+- [ ] Suite number — sources differ between 103 and 106.
+- [ ] Geo coordinates — JSON-LD latitude/longitude is approximate; replace with the
+      exact Google Maps pin.
+- [ ] Instagram account — confirm whether `@dolcebrows` remains the correct
+      published account, or whether `@dolcebeautylounge` should replace it in
+      `sameAs`.
 
-> Items marked done appear in **two** places — the visible page and the JSON-LD —
-> and both have been updated together. Keep them in sync; mismatched schema is
-> worse than absent schema.
+> Items marked done appear in two places — the visible page and the JSON-LD —
+> and both should stay in sync.
 
-### ⚠ Services copy — currently fictional
+### Services copy — currently fictional
 
-**The six services on the page were invented before the real business details
-were known, and most of them do not match what this studio actually offers.**
+The six service cards are placeholders and do not reflect the actual studio
+offering.
 
-The live site lists: threading (brows, upper/lower lip, chin, full face,
-sideburns), eyebrow tinting, acne facials (Face Reality bi-weekly, "acne
-bootcamp"), and black seed oil scalp treatments. It has **no** mention of hair
-styling, hair colour, makeup artistry, bridal, lashes or waxing — four of the
-six cards currently on the page.
+The live site appears to focus on: threading (brows, upper/lower lip, chin, full
+face, sideburns), eyebrow tinting, acne facials (Face Reality bi-weekly,
+"acne bootcamp"), and black seed oil scalp treatments. It does not currently
+advertise hair styling, makeup artistry, bridal, lashes, or waxing.
 
-Note the business rebranded from "Dolce Brows" to "Dolce Beauty Lounge", so the
-service list may well have expanded beyond what the old site advertises. Get the
-current list from the owner rather than copying the old site.
-
-- [ ] Rewrite the six `.service` cards in the Services section.
-- [ ] Mirror the same list into `hasOfferCatalog` in the JSON-LD.
-- [ ] Re-check the Statement sentence and the Ritual steps, which are written
-      around a broad full-service salon rather than a threading/skincare studio.
+- [ ] Rewrite the six `.service` cards in the Services section to match the real
+      business.
+- [ ] Mirror the same service list into `hasOfferCatalog` in the JSON-LD.
+- [ ] Review and update the Statement sentence and the Ritual steps, which are
+      still written around a broad full-service salon.
 
 ### Instagram — link only, by choice
 
-The Instagram section is a **link out**, not an embedded feed. Post embeds were
-built and then deliberately removed: no third-party script, no iframe, and no
-Instagram cookie is set on this page. It is linked in two places — the section
-before the footer, and the footer itself.
+The Instagram section is intentionally a link-out, not an embedded feed. That
+means no third-party Instagram script or iframe is loaded on the page.
 
-Note the two accounts: `@dolcebrows` is the active one (owner Samantha Cruz,
-~2,640 followers) and is what the site links. `@dolcebeautylounge` exists but has
-not posted since 2021; it is kept in the JSON-LD `sameAs` only.
+The site currently links `@dolcebrows` as the active account. `@dolcebeautylounge`
+exists but has not posted since 2021; it is kept in the JSON-LD only.
 
-If a live feed is ever wanted, be aware it cannot be done with a plain API call:
-Instagram's Basic Display API was **deprecated by Meta in December 2024**, and
-Graph API needs a Meta app plus a token refreshed every 60 days — which on a
-static site with no backend would sit exposed in client-side JS. The realistic
-options are a hosted widget (Behold, LightWidget, SnapWidget) that handles the
-token refresh, or hand-picked per-post embeds via Instagram's keyless
-`/embed/` endpoint.
+If a live feed is ever wanted, it should be done via a hosted widget or manual
+post embeds. A plain client-side API is not viable for a static site.
 
 ### Photography — `assets/img/space-0*.jpg`
 
 - [ ] Replace all six gallery images with real interior photography.
 
-They are currently frames pulled from the hero footage purely to hold the layout.
-Keep the aspect ratios — **4:5 portrait (1000×1250)** and **3:2 landscape
-(1500×1000)** — or update the `width`/`height` attributes to match, or the
-horizontal gallery will reflow.
+Current files are placeholder frames pulled from the hero footage. Keep the aspect
+ratios — **4:5 portrait (1000×1250)** and **3:2 landscape (1500×1000)** — or
+update the `width`/`height` attributes together.
 
 - [ ] Replace `assets/img/og-image.jpg` (1200×630) with a real hero shot.
-- [ ] `assets/img/services-plant.webp` (the turning plant in Services) is a stock
-      render with its background keyed out. Swap for a real studio object if you
-      have one. It **must have a genuine alpha channel** — it sits on the bone
-      surface, so any leftover white or grey matte will show as a hard rectangle.
-- [ ] Update the `alt` text on each image to describe the real photograph. The current
-      text describes the placeholder frames and will be wrong once swapped.
+- [ ] Replace `assets/img/services-plant.webp` with a real studio object that has
+      a genuine alpha channel.
+- [ ] Update all `alt` text to describe the real photographs once the images are
+      replaced.
 
 ### Optional
 
